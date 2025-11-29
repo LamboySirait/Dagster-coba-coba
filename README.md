@@ -34,42 +34,40 @@ erDiagram
     MERCHANTS ||--o{ TRANSACTIONS : "receives"
 ```
 
+## Project Structure
+## Project Structure
+
+```text
 DAGSTER/
-│
-├── DDL/                        # SQL scripts / schema definitions
+├── DDL/                         # SQL scripts / schema definitions
 │   ├── CLICK_HOUSE.sql
 │   ├── MYSQL_TABLE.sql
 │   ├── total_transaction_per_day.sql
-│   ├── total_transaction_per_merchant.sql
-│  
-│
-├── env/                        # Virtual environment dan dependencies
+│   └── total_transaction_per_merchant.sql
+├── env/                         # Virtual environment and dependencies
 │   ├── Include/
 │   ├── Lib/
 │   ├── Scripts/
 │   ├── share/
 │   └── pyvenv.cfg
-│
-├── etl/                        # Main ETL pipeline code (Dagster)
+├── etl/                         # Main ETL pipeline code (Dagster)
 │   ├── __pycache__/
-│   ├── Pseudo code/            # Pseudocode or reference logic
+│   ├── Pseudo code/             # Pseudocode or reference logic
 │   ├── __init__.py
-│   ├── assets.py               # Extract, Transform, Load assets
-│   ├── ch.py                   # ClickHouse helper functions
-│   ├── db.py                   # Source DB helper functions (MySQL/Mongo)
-│   ├── definitions.py          # Pipeline definitions & orchestration
-│   ├── mock_data.py            # Dummy / mock data for testing
-│   └── test.py                 # Quick tests for ETL assets
-│
-├── etl_tests/                  # Unit / integration tests for ETL pipeline
-│
-├── output/                     # Output files / temporary results
-│
-├── pyproject.toml              # Python project metadata / config
-├── README.md                   # Project documentation
-├── setup.cfg                   # Setup configuration
-└── setup.py                    # Setup script for package installation
+│   ├── assets.py                # Extract, Transform, Load assets
+│   ├── ch.py                    # ClickHouse helper functions
+│   ├── db.py                    # Source DB helper functions (MySQL/Mongo)
+│   ├── definitions.py           # Pipeline definitions & orchestration
+│   ├── mock_data.py             # Dummy / mock data for testing
+│   └── test.py                  # Quick tests for ETL assets
+├── etl_tests/                   # Unit / integration tests for ETL pipeline
+├── output/                      # Output files / temporary results
+├── pyproject.toml               # Python project metadata / config
+├── README.md                    # Project documentation
+├── setup.cfg                    # Setup configuration
+└── setup.py                     # Setup script
 
+```
 Setup and Running Instructions :
 
 1. Clone the Repository
